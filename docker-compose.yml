@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+    postgres:
+        image: "postgres:latest"
+    redis:
+        image: "redis:latest"
+    server:
+        build:
+            dockerfile: Dockerfile.dev
+            context: ./server
+        volumes:
+            # Dont try to override ou redirect the node_modules
+            - /app/node_modules
+            - ./server:/app

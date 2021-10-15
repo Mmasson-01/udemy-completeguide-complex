@@ -7,7 +7,7 @@ services:
 
 # Series of setup before running test, deploying, etc.
 before_install:
-  - docker build -t mrmasson/react-test -f ./client/Dockerfile.dev .
+  - docker build -t mrmasson/react-test -f ./client/Dockerfile.dev ./client
 
 # Command required to run the test suites
 # Travis CI will watch output of each command. If it returns something

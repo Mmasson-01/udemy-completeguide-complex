@@ -28,3 +28,15 @@ after_success:
   - docker push mrmasson/complex-client
   - docker push mrmasson/complex-server
   - docker push mrmasson/complex-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ca-central-1"
+  app: "mmasson-complex-docker"
+  env: "Mmassoncomplexdocker-env"
+  bucket_name: "elasticbeanstalk-us-west-2-107361703462"
+  bucket_path: "mmasson-complex-docker"
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY

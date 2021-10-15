@@ -18,7 +18,7 @@ script:
 # On test success, build production images
 after_success:
   - docker build -t mrmasson/complex-nginx ./nginx
-  - docker build -t mrmasson/complex-client ./clent
+  - docker build -t mrmasson/complex-client ./client
   - docker build -t mrmasson/complex-server ./server
   - docker build -t mrmasson/complex-worker ./worker
   # Log in to the docker CLI

@@ -35,7 +35,7 @@ deploy:
   app: "mmasson-complex-docker"
   env: "Mmassoncomplexdocker-env"
   bucket_name: "elasticbeanstalk-us-west-2-107361703462"
-  bucket_path: "mmasson-complex-docker"
+  bucket_path: "mmasson-docker-react-section6"
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY

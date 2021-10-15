@@ -2,11 +2,11 @@
 version: "3"
 services:
     client:
-        image: "mrmasson/complex-client-10-14"
+        image: "mrmasson/complex-client"
         mem_limit: 128m
         hostname: client
     server:
-        image: "mrmasson/complex-server-10-14"
+        image: "mrmasson/complex-server"
         mem_limit: 128m
         hostname: api
         environment:
@@ -18,14 +18,14 @@ services:
             - PGPASSWORD=$PGPASSWORD
             - PGPORT=$PGPORT
     worker:
-        image: "mrmasson/complex-worker-10-14"
+        image: "mrmasson/complex-worker"
         mem_limit: 128m
         hostname: worker
         environment:
             - REDIS_HOST=$REDIS_HOST
             - REDIS_PORT=$REDIS_PORT
     nginx:
-        image: "mrmasson/complex-nginx-10-14"
+        image: "mrmasson/complex-nginx"
         mem_limit: 128m
         hostname: nginx
         ports:

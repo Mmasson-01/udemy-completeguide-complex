@@ -1,5 +1,7 @@
 FROM node:alpine
 
+ENV NODE_OPTIONS=--openssl-legacy-provider
+
 # Prepare application work directory
 WORKDIR /app
 
